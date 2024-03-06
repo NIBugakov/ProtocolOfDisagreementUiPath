@@ -1,0 +1,59 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_extractDataFirst&Sequence_1",
+        "dt_extractDataSecond&Sequence_1",
+        "dt_sampleSecond&Sequence_1",
+        "dt_comparisonResultSecond&Sequence_1",
+        "dt_act2&Sequence_1",
+        "dt_comparisonResultFirst&Sequence_1",
+        "dt_resultingReport&Sequence_1",
+        "dt_act1&Sequence_1",
+        "dt_sampleFirst&Sequence_1",
+        "str_targetHeadName&Sequence_1",
+        "str_listFinalFile&Sequence_1",
+        "str_pathToFinalFile&Sequence_1",
+        "str_pathToFile&Sequence_1",
+        "list_businessExceptions&Sequence_1",
+        "list_listName&Sequence_1",
+        "int_numOfRow&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "TableOptimization.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "int_counterColumns2&Sequence_1",
+        "int_counterColumns1&Sequence_1",
+        "int_counterColumns&Sequence_3",
+        "str_newName&Sequence_3",
+        "list_nameTable&Sequence_1",
+        "str_targetHeadName&Sequence_1",
+        "int_numRow&Sequence_1",
+        "int_posDate&Sequence_1",
+        "int_shiftRow&Sequence_1",
+        "int_shift&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "io_dt_changeable",
+        "in_dt_extractData"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
