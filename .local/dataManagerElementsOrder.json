@@ -12,6 +12,10 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "str_cellTarget&Sequence_1",
+        "cell_position&Sequence_13",
+        "wb_excel&Sequence_1",
+        "int_indexRow&Sequence_1",
         "dt_extractDataFirst&Sequence_1",
         "dt_extractDataSecond&Sequence_1",
         "dt_sampleSecond&Sequence_1",
@@ -51,6 +55,42 @@
       "ArgumentsSectionElementsOrder": [
         "io_dt_changeable",
         "in_dt_extractData"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "FindingErrors.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "list_difference&Sequence_10",
+        "_out_ForEachRow_3__CurrentIndex&Sequence_1",
+        "dt_comparisonResult1&Sequence_1",
+        "dt_comparisonResult2&Sequence_1",
+        "dt_comparisonResult3&Sequence_1",
+        "dt_sampleFrom&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_dt_comparisonResult",
+        "in_dt_sampleTo",
+        "in_dt_sampleFrom",
+        "in_list_businessExceptions"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "AdjustingInputData.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "cell_pos&Sequence_12",
+        "str_cellTarget&Sequence_12"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_str_pathToFile",
+        "in_str_nameTargetColumn",
+        "in_str_listName",
+        "in_dt_wrongActs"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null

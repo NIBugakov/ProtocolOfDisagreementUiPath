@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1233,3756</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>775,3797</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>TableOptimization_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -106,7 +106,7 @@
       <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="TableOptimization" sap:VirtualizedContainerService.HintSize="705,3691" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Описание скрипта:&#xA;Скрипт отвечает за привидение таблицы к читаемому виду" DisplayName="TableOptimization" sap:VirtualizedContainerService.HintSize="705,3732" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="int_shift" />
       <Variable x:TypeArguments="x:Int32" Name="int_shiftRow" />
@@ -120,6 +120,7 @@
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Assign DisplayName="Инициализация сдвига" sap:VirtualizedContainerService.HintSize="643,122" sap2010:WorkflowViewState.IdRef="Assign_1">
@@ -164,19 +165,19 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:AddDataColumn>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[int_numRow]" DataTable="[in_dt_extractData]" DisplayName="Для каждой строки" sap:VirtualizedContainerService.HintSize="643,426" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[int_numRow]" DataTable="[in_dt_extractData]" DisplayName="Для каждой строки" sap:VirtualizedContainerService.HintSize="643,425" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Текст" sap:VirtualizedContainerService.HintSize="496,222" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Текст" sap:VirtualizedContainerService.HintSize="496,221" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign sap2010:Annotation.AnnotationText="3 - смещение из-за форматирования таблицы " DisplayName="Присваивание номера строки с учетом сдвига от форматирования" sap:VirtualizedContainerService.HintSize="434,137" sap2010:WorkflowViewState.IdRef="Assign_5">
+            <Assign sap2010:Annotation.AnnotationText="3 - смещение из-за форматирования таблицы " DisplayName="Присваивание номера строки с учетом сдвига от форматирования" sap:VirtualizedContainerService.HintSize="434,136" sap2010:WorkflowViewState.IdRef="Assign_5">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Object">[CurrentRow("id")]</OutArgument>
               </Assign.To>
@@ -378,6 +379,12 @@
           </Sequence>
         </ActivityAction>
       </ui:ForEach.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:ForEach>
   </Sequence>
 </Activity>
