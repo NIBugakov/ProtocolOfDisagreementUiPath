@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1233,4689</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1233,4950</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>FindingErrors_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -104,7 +104,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Описание cкрипта:&#xA;Скрипт сравнивает таблицы &#xA;(котору сравнивают: in_dt_sampleFrom) &#xA;(c которой сравнивают: in_dt_sampleTo) &#xA;и получает из них таблицы ,отобранные по исключениям.&#xA;&#xA;1-ое исключение: бизнес ошибка &#xA;2-ое исключение:не совпадает ключ {дата + номер договора}&#xA;3-ое исключение: не совпадегние сумм" DisplayName="FindingErrors" sap:VirtualizedContainerService.HintSize="637,4624" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Описание cкрипта:&#xA;Скрипт сравнивает таблицы &#xA;(котору сравнивают: in_dt_sampleFrom) &#xA;(c которой сравнивают: in_dt_sampleTo) &#xA;и получает из них таблицы ,отобранные по исключениям.&#xA;&#xA;1-ое исключение: бизнес ошибка &#xA;2-ое исключение:не совпадает ключ {дата + номер договора}&#xA;3-ое исключение: не совпадегние сумм" DisplayName="FindingErrors" sap:VirtualizedContainerService.HintSize="637,4885" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_sampleFrom" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_comparisonResult3" />
@@ -163,8 +163,8 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
-    <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Разность" DataTable="[dt_sampleFrom]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="575,229" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_5" />
-    <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Разногласия" DataTable="[dt_sampleFrom]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="575,229" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_7" />
+    <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Разность" DataTable="[dt_sampleFrom]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="575,226" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_5" />
+    <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Разногласия" DataTable="[dt_sampleFrom]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="575,226" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_7" />
     <TryCatch DisplayName="Ловит случаи отсутвия данного типа &quot;разногласия&quot; в таблицы " sap:VirtualizedContainerService.HintSize="575,65" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -173,7 +173,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Assign DisplayName="Получение таблицы с неправильным ключом" sap:VirtualizedContainerService.HintSize="434,84" sap2010:WorkflowViewState.IdRef="Assign_1">
+        <Assign DisplayName="Получение таблицы с неправильным ключом" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_1">
           <Assign.To>
             <OutArgument x:TypeArguments="sd:DataTable">[dt_comparisonResult1]</OutArgument>
           </Assign.To>
@@ -192,7 +192,7 @@
         </Assign>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,23" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="438,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -207,19 +207,19 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_comparisonResult1]" DisplayName="Для каждой строки" sap:VirtualizedContainerService.HintSize="575,431" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_comparisonResult1]" DisplayName="Для каждой строки" sap:VirtualizedContainerService.HintSize="575,428" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Текст" sap:VirtualizedContainerService.HintSize="541,225" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Текст" sap:VirtualizedContainerService.HintSize="541,224" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:MultipleAssign DisplayName="Добавляем обозначение ошбики" sap:VirtualizedContainerService.HintSize="479,140" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+            <ui:MultipleAssign DisplayName="Добавляем обозначение ошбики" sap:VirtualizedContainerService.HintSize="479,139" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
               <ui:MultipleAssign.AssignOperations>
                 <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
@@ -243,7 +243,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEachRow>
-    <If Condition="[dt_comparisonResult1.RowCount &gt; 0]" DisplayName="Проверка на пустату" sap:VirtualizedContainerService.HintSize="575,596" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[dt_comparisonResult1.RowCount &gt; 0]" DisplayName="Проверка на пустату" sap:VirtualizedContainerService.HintSize="575,592" sap2010:WorkflowViewState.IdRef="If_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -251,14 +251,14 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="Если не пустая то обьеденить" sap:VirtualizedContainerService.HintSize="496,367" sap2010:WorkflowViewState.IdRef="Sequence_6">
+        <Sequence DisplayName="Если не пустая то обьеденить" sap:VirtualizedContainerService.HintSize="496,364" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Assign sap:VirtualizedContainerService.HintSize="434,124" sap2010:WorkflowViewState.IdRef="Assign_5">
+          <Assign sap:VirtualizedContainerService.HintSize="434,123" sap2010:WorkflowViewState.IdRef="Assign_5">
             <Assign.To>
               <OutArgument x:TypeArguments="sd:DataTable">[dt_sampleFrom]</OutArgument>
             </Assign.To>
@@ -268,7 +268,7 @@
 .Any(Function(x) x("номер").ToString() = row1("номер").ToString())).CopyToDataTable()]</InArgument>
             </Assign.Value>
           </Assign>
-          <ui:MergeDataTable Destination="[out_dt_comparisonResult]" DisplayName="Merge Data Table" sap:VirtualizedContainerService.HintSize="434,158" sap2010:WorkflowViewState.IdRef="MergeDataTable_2" MissingSchemaAction="AddWithKey" Source="[dt_comparisonResult1]" />
+          <ui:MergeDataTable Destination="[out_dt_comparisonResult]" DisplayName="Merge Data Table" sap:VirtualizedContainerService.HintSize="434,156" sap2010:WorkflowViewState.IdRef="MergeDataTable_2" MissingSchemaAction="AddWithKey" Source="[dt_comparisonResult1]" />
         </Sequence>
       </If.Then>
       <If.Else>
@@ -282,15 +282,15 @@
         </Sequence>
       </If.Else>
     </If>
-    <TryCatch DisplayName="Ловит случаи отсутвия данного типа &quot;разногласия&quot; в таблицы " sap:VirtualizedContainerService.HintSize="575,65" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+    <TryCatch DisplayName="Ловит случаи отсутвия данного типа &quot;разногласия&quot; в таблицы " sap:VirtualizedContainerService.HintSize="575,351" sap2010:WorkflowViewState.IdRef="TryCatch_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Assign DisplayName="Получение таблицы с неправильным ключом" sap:VirtualizedContainerService.HintSize="434,84" sap2010:WorkflowViewState.IdRef="Assign_4">
+        <Assign DisplayName="Получение таблицы с неправильным ключом" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_4">
           <Assign.To>
             <OutArgument x:TypeArguments="sd:DataTable">[dt_comparisonResult2]</OutArgument>
           </Assign.To>
@@ -309,10 +309,10 @@ row2("Дата").ToString() + row2("Номер").ToString() &lt;&gt; row1("Да�
         </Assign>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="409,106" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="438,22" sap2010:WorkflowViewState.IdRef="Catch`1_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -324,19 +324,19 @@ row2("Дата").ToString() + row2("Номер").ToString() &lt;&gt; row1("Да�
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_comparisonResult2]" DisplayName="Для каждой строки" sap:VirtualizedContainerService.HintSize="575,431" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_comparisonResult2]" DisplayName="Для каждой строки" sap:VirtualizedContainerService.HintSize="575,428" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Текст" sap:VirtualizedContainerService.HintSize="541,225" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Текст" sap:VirtualizedContainerService.HintSize="541,224" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:MultipleAssign DisplayName="Добавляем обозначение ошбики" sap:VirtualizedContainerService.HintSize="479,140" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+            <ui:MultipleAssign DisplayName="Добавляем обозначение ошбики" sap:VirtualizedContainerService.HintSize="479,139" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
               <ui:MultipleAssign.AssignOperations>
                 <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">

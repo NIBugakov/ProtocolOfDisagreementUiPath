@@ -1,0 +1,652 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ReceivingActs" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1228,10528" sap2010:WorkflowViewState.IdRef="ReceivingActs_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Описание скрипта:&#xA;Скрипт отвечает выгрузку актов с 1С" DisplayName="ReceivingActs" sap:VirtualizedContainerService.HintSize="791,10463" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="Акты сверки расчетов" Name="str_toSearch" />
+      <Variable x:TypeArguments="scg:List(x:String)" Name="list_agreementName" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:MultipleAssign DisplayName="Multiple Assign_переменные" sap:VirtualizedContainerService.HintSize="729,188" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+      <ui:MultipleAssign.AssignOperations>
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[str_toSearch]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">Акты сверки расчетов</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="scg:List(x:String)">[list_agreementName]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="scg:List(x:String)">[new List(of String)() From {"Основной договор" ,"Новый"}]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+        </scg:List>
+      </ui:MultipleAssign.AssignOperations>
+    </ui:MultipleAssign>
+    <Sequence DisplayName="Переход к созданию актов сверки" sap:VirtualizedContainerService.HintSize="729,10143" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Запуск 1С:Предприятия (учебной версии)" sap:VirtualizedContainerService.HintSize="667,603" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="e1abba5a-405d-4922-ac68-2392bb17f45d" Version="V2">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="416,270" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick ActivateBefore="True" ClickType="Double" DisplayName="Click 'Бухгалтерия предприятия'" sap:VirtualizedContainerService.HintSize="354,183" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e1abba5a-405d-4922-ac68-2392bb17f45d" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvTextArea="23, 104, 253, 16" CvTextArgument="6yxranTepVA npeAnpMATMA y4e6HaA (AeMo)" CvType="Text" DesignTimeRectangle="16, 97, 306, 29" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;uia name='*Бухгалтерия предприятия учебная (демо)*' role='элемент списка' /&gt;" FuzzySelectorArgument="&lt;uia name='*Бухгалтерия предприятия учебная (демо)*' role='элемент списка' automationid='' check:fulltext='Бухгалтерия предприятия учебная (демо)' /&gt;" Guid="2c69322a-2cf9-42b1-ae8d-5b240f2a4c1f" InformativeScreenshot="bf94b4d8ca781adfd1a8e6d7a97cd6ec.png" ScopeSelectorArgument="&lt;wnd app='1cv8st.exe' cls='V8TopLevelFrameTaxiStarter' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="419, 258, 488, 391" FilePath="C:\Program Files (x86)\1cv8t\8.3.18.1741\bin\1cv8st.exe" IconBase64="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" InformativeScreenshot="3340588d077922ad0fb36757aaef16aa.png" Selector="&lt;wnd app='1cv8st.exe' cls='*TopLevel*' /&gt;" Title="Запуск 1С:Предприятия (учебной версии)" />
+        </uix:NApplicationCard.TargetApp>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </uix:NApplicationCard>
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: 1С:Предприятие" sap:VirtualizedContainerService.HintSize="667,9429" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" ScopeGuid="38c21c1a-a968-49c8-8df6-3efe6530e582" Version="V2">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="633,9113" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="str_selection" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Войти'" sap:VirtualizedContainerService.HintSize="571,198" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="38c21c1a-a968-49c8-8df6-3efe6530e582" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvElementArea="193, 167, 92, 27" CvTextArea="218, 173, 40, 13" CvTextArgument="BoTH" CvType="Button" DesignTimeRectangle="194, 168, 90, 26" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;uia name='Войти' role='кнопка' /&gt;" FuzzySelectorArgument="&lt;uia name='Войти' role='кнопка' automationid='' check:fulltext='Войти' /&gt;" Guid="f11a284f-ecd1-4e6f-9c0f-43701474ffec" InformativeScreenshot="a4e2999cd8627a814144ae340cf8a43e.png" ScopeSelectorArgument="&lt;wnd app='1cv8ct.exe' cls='*TopLeve*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Главное'" sap:VirtualizedContainerService.HintSize="571,198" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="38c21c1a-a968-49c8-8df6-3efe6530e582" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvTextArea="45, 75, 50, 13" CvTextArgument="InaBHoe" CvType="Text" DesignTimeRectangle="1, 64, 184, 36" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;uia name='Главное' role='элемент вкладки' /&gt;" FuzzySelectorArgument="&lt;uia name='Главное' role='элемент вкладки' automationid='' check:fulltext='Главное' /&gt;" Guid="7061a3b3-9bb9-435b-98c4-f773ee0f1dde" InformativeScreenshot="9409a903ce542d329f0aa6daa2fb52f6.png" ScopeSelectorArgument="&lt;wnd app='1cv8ct.exe' cls='V8TopLevelFrameSDI' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Акты сверки'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="571,259" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="38c21c1a-a968-49c8-8df6-3efe6530e582" Text="[str_toSearch]" Version="V3">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="1111, 53, 240, 24" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;uia name='Поиск по функциям' role='поле' /&gt;" FuzzySelectorArgument="&lt;uia name='Поиск по функциям' role='поле' automationid='' check:text='Акты сверки' /&gt;" Guid="f422619c-058a-4aea-b357-df8f00cf8a0b" InformativeScreenshot="6b1c58245fee5cbc32b3c534984273a0.png" ScopeSelectorArgument="&lt;wnd app='1cv8ct.exe' cls='*TopLevel*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                </uix:NTypeInto.Target>
+              </uix:NTypeInto>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Акты сверки'" sap:VirtualizedContainerService.HintSize="571,198" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="38c21c1a-a968-49c8-8df6-3efe6530e582" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvTextArea="527, 202, 139, 15" CvTextArgument="AKTbI CBepKM pac4eTOB" CvType="Text" DesignTimeRectangle="509, 199, 158, 20" DesignTimeScaleFactor="1" FullSelectorArgument="[string.Format(&quot;&lt;uia name='*ПРОДАЖИ*' /&gt;&lt;uia name='{0}' role='*элемент меню*' /&gt;&quot;, str_toSearch)]" FuzzySelectorArgument="&lt;uia name='ПРОДАЖИ' /&gt;&lt;uia name='Акты сверки расчетов' role='элемент меню' automationid='' check:fulltext='Акты сверки расчетов' /&gt;" Guid="bfc3e8c9-efbc-489b-835a-ccb7530c1411" InformativeScreenshot="ef7b9aef1786e10f168e349b6915d44d.png" ScopeSelectorArgument="&lt;wnd app='1cv8ct.exe' cls='*TopLevel*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="5" DisplayName="Click 'Создать'" sap:VirtualizedContainerService.HintSize="571,198" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="38c21c1a-a968-49c8-8df6-3efe6530e582" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvElementArea="197, 139, 80, 29" CvTextArea="210, 146, 51, 15" CvTextArgument="Co3paTb" CvType="Button" DesignTimeRectangle="198, 140, 77, 27" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;uia name='Создать' role='кнопка' /&gt;" FuzzySelectorArgument="&lt;uia role='панель инструментов' /&gt;&lt;uia name='Создать' role='кнопка' automationid='' check:fulltext='Создать' /&gt;" Guid="aef8cf99-ee52-46f4-81bb-7a7718c01a37" ImageBase64="" InformativeScreenshot="3b145c0c0bfc7f63e71570d75c19b20f.png" ScopeSelectorArgument="&lt;wnd app='1cv8ct.exe' cls='*TopLevel*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <ui:RetryScope DisplayName="Retry Scope обработка инн" sap:VirtualizedContainerService.HintSize="571,1757" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="5">
+                <ui:RetryScope.ActivityBody>
+                  <ActivityAction>
+                    <Sequence DisplayName="Действие" sap:VirtualizedContainerService.HintSize="529,1540" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:String" Default="7799292647" Name="str_INN" />
+                        <Variable x:TypeArguments="x:Boolean" Name="bool_existINN" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="инн 7799292647/ тест информация *оставлю это туть" DisplayName="Input Dialog_ввод инн" sap:VirtualizedContainerService.HintSize="467,327" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Введите ИНН" Title="Инфрормация">
+                        <ui:InputDialog.Result>
+                          <OutArgument x:TypeArguments="x:String">[str_INN]</OutArgument>
+                        </ui:InputDialog.Result>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:InputDialog>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into_'поле ввода инн'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="467,259" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="38c21c1a-a968-49c8-8df6-3efe6530e582" Text="[str_INN]" Version="V3">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="287, 176, 410, 25" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;uia name='Контрагент:' role='поле со списком' /&gt;" FuzzySelectorArgument="&lt;uia name='Контрагент:' role='поле со списком' automationid='' /&gt;" Guid="f4c6b997-a0ee-42d9-9d4f-848ff3546a61" InformativeScreenshot="d20a3364951340db93dc22ff0bddffd0.png" ScopeSelectorArgument="&lt;wnd app='1cv8ct.exe' cls='*TopLevel*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                        </uix:NTypeInto.Target>
+                      </uix:NTypeInto>
+                      <ui:UiElementExists DisplayName="Element Exists_'вводимый инн'" Exists="[bool_existINN]" sap:VirtualizedContainerService.HintSize="467,147" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                        <ui:UiElementExists.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d1669f45-4b8d-41f4-b016-e5fa1f60b1c7" InformativeScreenshot="65a42187b8ded5f1e911f63dcc313fb4" Selector="[string.Format(&quot;&lt;wnd app='1cv8ct.exe' cls='V8DropWindowExWnd' /&gt;&lt;uia name='*{0}*' role='элемент списка' /&gt;&quot;, str_INN)]">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:UiElementExists.Target>
+                      </ui:UiElementExists>
+                      <ui:IfElseIf DisplayName="Else If _существует ли " sap:VirtualizedContainerService.HintSize="467,722" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+                        <ui:IfElseIf.ConditionBlocks>
+                          <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                            <ui:IfElseIfBlock BlockType="If" Condition="[bool_existINN]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_1">
+                              <ui:IfElseIfBlock.Then>
+                                <Sequence DisplayName="Текст" sap:VirtualizedContainerService.HintSize="416,266" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click_'по полю с инн'" sap:VirtualizedContainerService.HintSize="354,181" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="38c21c1a-a968-49c8-8df6-3efe6530e582" Version="V3">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable CvTextArea="18, 11, 199, 16" CvTextArgument="7799292647 (J116nM 4BeTbl OOO)" CvType="Text" DesignTimeRectangle="4, 4, 316, 29" DesignTimeScaleFactor="1" FullSelectorArgument="[string.Format(&quot;&lt;uia name='*{0}*' role='элемент списка' /&gt;&quot;, str_INN)]" FuzzySelectorArgument="&lt;uia role='список' /&gt;&lt;uia name='7799292647 (Любим цветы ООО)' role='элемент списка' automationid='' check:fulltext='7799292647 (Любим цветы ООО)' /&gt;" Guid="38d0a25c-4d54-4d20-b221-a8d51493808b" InformativeScreenshot="99fb0ff8791b50323079f2f879400361.png" ScopeSelectorArgument="&lt;wnd app='1cv8ct.exe' cls='V8DropWindowExWnd' idx='*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                </Sequence>
+                              </ui:IfElseIfBlock.Then>
+                            </ui:IfElseIfBlock>
+                            <ui:IfElseIfBlock BlockType="Else" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_3">
+                              <ui:IfElseIfBlock.Then>
+                                <Sequence DisplayName="Текст" sap:VirtualizedContainerService.HintSize="416,199" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Throw DisplayName="Throw_сообщение с ошибкой " Exception="[new Exception(&quot;ИНН не существует текущего&quot;)]" sap:VirtualizedContainerService.HintSize="354,114" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                                </Sequence>
+                              </ui:IfElseIfBlock.Then>
+                            </ui:IfElseIfBlock>
+                          </sc:BindingList>
+                        </ui:IfElseIf.ConditionBlocks>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:IfElseIf>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:RetryScope.ActivityBody>
+                <ui:RetryScope.Condition>
+                  <ActivityFunc x:TypeArguments="x:Boolean" />
+                </ui:RetryScope.Condition>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:RetryScope>
+              <Assign DisplayName="Assign_ создание стринга для селектора договоров" sap:VirtualizedContainerService.HintSize="571,123" sap2010:WorkflowViewState.IdRef="Assign_1">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[str_selection]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[string.Join(";"c,list_agreementName)]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:RetryScope DisplayName="Retry Scope_выбор договора" sap:VirtualizedContainerService.HintSize="571,1798" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="5">
+                <ui:RetryScope.ActivityBody>
+                  <ActivityAction>
+                    <Sequence DisplayName="Действие" sap:VirtualizedContainerService.HintSize="529,1581" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:String" Default="7799292647" Name="str_INN" />
+                        <Variable x:TypeArguments="x:Boolean" Name="bool_existINN" />
+                        <Variable x:TypeArguments="x:String" Name="str_agreement" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:InputDialog Options="{x:Null}" sap2010:Annotation.AnnotationText="" DisplayName="Input Dialog_выбор из договоров" sap:VirtualizedContainerService.HintSize="467,368" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Выберете договор" OptionsString="[str_selection]" Title="Инфрормация">
+                        <ui:InputDialog.Result>
+                          <OutArgument x:TypeArguments="x:String">[str_agreement]</OutArgument>
+                        </ui:InputDialog.Result>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:InputDialog>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'поле с договорами'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="467,259" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="38c21c1a-a968-49c8-8df6-3efe6530e582" Text="[str_agreement]" Version="V3">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable CvElementArea="287, 207, 382, 31" CvType="InputBox" DesignTimeRectangle="287, 207, 382, 31" DesignTimeScaleFactor="1" ElementType="InputBox" Guid="fd191722-3191-4cbe-bfe1-1bcbc919fe24" InformativeScreenshot="5bbee1fc9da70a4eb0b90a29889b73bc.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='1cv8ct.exe' cls='V8TopLevelFrameSDI' title='Бухгалтерия предприятия (учебная), редакция 3.0' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target CvTextArea="196, 215, 54, 16" CvTextArgument="AoroBop:" CvType="Text" DesignTimeRectangle="196, 215, 54, 16" ElementType="Text" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NTypeInto.Target>
+                      </uix:NTypeInto>
+                      <ui:UiElementExists DisplayName="Element Exists 'договор существует'" Exists="[bool_existINN]" sap:VirtualizedContainerService.HintSize="467,147" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+                        <ui:UiElementExists.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d1669f45-4b8d-41f4-b016-e5fa1f60b1c7" InformativeScreenshot="93d2cfea4423c37e43a3ce742b455f96" Selector="[string.Format(&quot;&lt;wnd app='1cv8ct.exe' cls='V8DropWindowExWnd' /&gt;&lt;uia name='*{0}*' role='элемент списка' /&gt;&quot;, str_agreement)]">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:UiElementExists.Target>
+                      </ui:UiElementExists>
+                      <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="467,722" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
+                        <ui:IfElseIf.ConditionBlocks>
+                          <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                            <ui:IfElseIfBlock BlockType="If" Condition="[bool_existINN]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_4">
+                              <ui:IfElseIfBlock.Then>
+                                <Sequence DisplayName="Текст" sap:VirtualizedContainerService.HintSize="416,266" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Клик по договору'" sap:VirtualizedContainerService.HintSize="354,181" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="38c21c1a-a968-49c8-8df6-3efe6530e582" Version="V3">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable CvTextArea="18, 11, 195, 16" CvTextArgument="OcHOBHO AOroBOp (00-000002)" CvType="Text" DesignTimeRectangle="4, 4, 316, 29" DesignTimeScaleFactor="1" FullSelectorArgument="[string.Format(&quot;&lt;uia name='*{0}*' role='элемент списка' /&gt;&quot;, str_agreement)]" FuzzySelectorArgument="&lt;uia role='список' /&gt;&lt;uia name='Основной договор (00-000002)' role='элемент списка' automationid='' check:fulltext='Основной договор (00-000002)' /&gt;" Guid="aa118211-9f40-4711-963a-9aa0f2a81c9e" InformativeScreenshot="8aaa70a1cc124ba23129272aa9af92a7.png" ScopeSelectorArgument="&lt;wnd app='1cv8ct.exe' cls='V8DropWindowExWnd' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                </Sequence>
+                              </ui:IfElseIfBlock.Then>
+                            </ui:IfElseIfBlock>
+                            <ui:IfElseIfBlock BlockType="Else" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_5">
+                              <ui:IfElseIfBlock.Then>
+                                <Sequence DisplayName="Текст" sap:VirtualizedContainerService.HintSize="416,199" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Throw Exception="[new Exception(&quot;Договора текущего не существует&quot;)]" sap:VirtualizedContainerService.HintSize="354,114" sap2010:WorkflowViewState.IdRef="Throw_2" />
+                                </Sequence>
+                              </ui:IfElseIfBlock.Then>
+                            </ui:IfElseIfBlock>
+                          </sc:BindingList>
+                        </ui:IfElseIf.ConditionBlocks>
+                      </ui:IfElseIf>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:RetryScope.ActivityBody>
+                <ui:RetryScope.Condition>
+                  <ActivityFunc x:TypeArguments="x:Boolean" />
+                </ui:RetryScope.Condition>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:RetryScope>
+              <ui:RetryScope DisplayName="Проверка ввода даты начала" sap:VirtualizedContainerService.HintSize="571,1522" sap2010:WorkflowViewState.IdRef="RetryScope_3" NumberOfRetries="5">
+                <ui:RetryScope.ActivityBody>
+                  <ActivityAction>
+                    <Sequence DisplayName="Действие" sap:VirtualizedContainerService.HintSize="529,1305" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:String" Default="7799292647" Name="str_INN" />
+                        <Variable x:TypeArguments="x:Boolean" Name="bool_existINN" />
+                        <Variable x:TypeArguments="x:String" Name="str_agreement" />
+                        <Variable x:TypeArguments="x:String" Name="str_startDate" />
+                        <Variable x:TypeArguments="x:Boolean" Name="bool_correctFormat" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="" DisplayName="Input Dialog_старт работы с пользователем" sap:VirtualizedContainerService.HintSize="467,314" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Введите дату начала" Title="Инфрормация">
+                        <ui:InputDialog.Result>
+                          <OutArgument x:TypeArguments="x:String">[str_startDate]</OutArgument>
+                        </ui:InputDialog.Result>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:InputDialog>
+                      <Assign DisplayName="Assign_проврка форматы даты" sap:VirtualizedContainerService.HintSize="467,123" sap2010:WorkflowViewState.IdRef="Assign_2">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Boolean">[bool_correctFormat]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Boolean">[System.Text.RegularExpressions.Regex.IsMatch(str_startDate,"^\d{2}.\d{2}.\d{4}\s*")]</InArgument>
+                        </Assign.Value>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Assign>
+                      <ui:IfElseIf DisplayName="Else If_правильный ли формат" sap:VirtualizedContainerService.HintSize="467,783" sap2010:WorkflowViewState.IdRef="IfElseIf_3">
+                        <ui:IfElseIf.ConditionBlocks>
+                          <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                            <ui:IfElseIfBlock BlockType="If" Condition="[bool_correctFormat]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_6">
+                              <ui:IfElseIfBlock.Then>
+                                <Sequence DisplayName="Текст" sap:VirtualizedContainerService.HintSize="416,327" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into_поле началы даты" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,242" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="38c21c1a-a968-49c8-8df6-3efe6530e582" Text="[str_startDate]" Version="V3">
+                                    <uix:NTypeInto.Target>
+                                      <uix:TargetAnchorable CvElementArea="286, 244, 102, 26" CvType="InputBox" DesignTimeRectangle="286, 244, 102, 26" DesignTimeScaleFactor="1" ElementType="InputBox" Guid="a39a08d8-a632-4eaa-8f49-c846e30ce82c" ImageBase64="" InformativeScreenshot="75a336f305ff6a557a8f1b802d2504f0.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='1cv8ct.exe' cls='*TopLevel*' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V3" Visibility="Interactive">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                            <uix:Target CvTextArea="197, 250, 49, 16" CvTextArgument="Nepnog:" CvType="Text" DesignTimeRectangle="197, 250, 49, 16" ElementType="Text" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NTypeInto.Target>
+                                  </uix:NTypeInto>
+                                </Sequence>
+                              </ui:IfElseIfBlock.Then>
+                            </ui:IfElseIfBlock>
+                            <ui:IfElseIfBlock BlockType="Else" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_7">
+                              <ui:IfElseIfBlock.Then>
+                                <Sequence DisplayName="Текст" sap:VirtualizedContainerService.HintSize="416,199" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Throw Exception="[new Exception(&quot;Не правельный формат даты&quot;)]" sap:VirtualizedContainerService.HintSize="354,114" sap2010:WorkflowViewState.IdRef="Throw_3" />
+                                </Sequence>
+                              </ui:IfElseIfBlock.Then>
+                            </ui:IfElseIfBlock>
+                          </sc:BindingList>
+                        </ui:IfElseIf.ConditionBlocks>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:IfElseIf>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:RetryScope.ActivityBody>
+                <ui:RetryScope.Condition>
+                  <ActivityFunc x:TypeArguments="x:Boolean" />
+                </ui:RetryScope.Condition>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:RetryScope>
+              <ui:RetryScope DisplayName="Retry Scope_Проверка ввода даты конца" sap:VirtualizedContainerService.HintSize="571,1602" sap2010:WorkflowViewState.IdRef="RetryScope_4" NumberOfRetries="5">
+                <ui:RetryScope.ActivityBody>
+                  <ActivityAction>
+                    <Sequence DisplayName="Действие" sap:VirtualizedContainerService.HintSize="529,1305" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:String" Default="7799292647" Name="str_INN" />
+                        <Variable x:TypeArguments="x:Boolean" Name="bool_existINN" />
+                        <Variable x:TypeArguments="x:String" Name="str_agreement" />
+                        <Variable x:TypeArguments="x:String" Name="str_startDate" />
+                        <Variable x:TypeArguments="x:Boolean" Name="bool_correctFormat" />
+                        <Variable x:TypeArguments="x:String" Name="str_expirationDate" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="" DisplayName="Input Dialog_ввод даты конца" sap:VirtualizedContainerService.HintSize="467,314" sap2010:WorkflowViewState.IdRef="InputDialog_4" IsPassword="False" Label="Введите дату конца" Title="Инфрормация">
+                        <ui:InputDialog.Result>
+                          <OutArgument x:TypeArguments="x:String">[str_expirationDate]</OutArgument>
+                        </ui:InputDialog.Result>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:InputDialog>
+                      <Assign DisplayName="Проверка правльного формата" sap:VirtualizedContainerService.HintSize="467,123" sap2010:WorkflowViewState.IdRef="Assign_3">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Boolean">[bool_correctFormat]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Boolean">[System.Text.RegularExpressions.Regex.IsMatch(str_expirationDate,"^\d{2}.\d{2}.\d{4}\s*")]</InArgument>
+                        </Assign.Value>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Assign>
+                      <ui:IfElseIf DisplayName="Else If_правильный ли формат" sap:VirtualizedContainerService.HintSize="467,783" sap2010:WorkflowViewState.IdRef="IfElseIf_4">
+                        <ui:IfElseIf.ConditionBlocks>
+                          <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                            <ui:IfElseIfBlock BlockType="If" Condition="[bool_correctFormat]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_8">
+                              <ui:IfElseIfBlock.Then>
+                                <Sequence DisplayName="Текст" sap:VirtualizedContainerService.HintSize="416,327" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'в поле даты конца'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,242" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="38c21c1a-a968-49c8-8df6-3efe6530e582" Text="[str_expirationDate]" Version="V3">
+                                    <uix:NTypeInto.Target>
+                                      <uix:TargetAnchorable DesignTimeRectangle="442, 245, 122, 25" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;uia helpText='Дата окончания периода сверки' role='поле' /&gt;" FuzzySelectorArgument="&lt;uia helpText='Дата окончания периода сверки' role='поле' automationid='' check:text='.  .' /&gt;" Guid="e6f05261-a63f-402b-971b-93457b437f56" InformativeScreenshot="5a645dff35c88d1eed6b8eb0afb8f143.png" ScopeSelectorArgument="&lt;wnd app='1cv8ct.exe' cls='*TopLevel*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                                    </uix:NTypeInto.Target>
+                                  </uix:NTypeInto>
+                                </Sequence>
+                              </ui:IfElseIfBlock.Then>
+                            </ui:IfElseIfBlock>
+                            <ui:IfElseIfBlock BlockType="Else" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_9">
+                              <ui:IfElseIfBlock.Then>
+                                <Sequence DisplayName="Текст" sap:VirtualizedContainerService.HintSize="416,199" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Throw Exception="[new Exception(&quot;Не правельный формат даты&quot;)]" sap:VirtualizedContainerService.HintSize="354,114" sap2010:WorkflowViewState.IdRef="Throw_4" />
+                                </Sequence>
+                              </ui:IfElseIfBlock.Then>
+                            </ui:IfElseIfBlock>
+                          </sc:BindingList>
+                        </ui:IfElseIf.ConditionBlocks>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:IfElseIf>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:RetryScope.ActivityBody>
+                <ui:RetryScope.Condition>
+                  <ActivityFunc x:TypeArguments="x:Boolean" />
+                </ui:RetryScope.Condition>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:RetryScope>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Заполнить'" sap:VirtualizedContainerService.HintSize="571,198" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="38c21c1a-a968-49c8-8df6-3efe6530e582" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvElementArea="312, 315, 98, 29" CvType="InputBox" DesignTimeRectangle="313, 316, 95, 27" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;uia name='Заполнить' role='кнопка' /&gt;" FuzzySelectorArgument="&lt;uia name='Заполнить' role='кнопка' automationid='' check:fulltext='Заполнить' /&gt;" Guid="82712444-2fc4-4a8d-95e5-6fe61840d2a1" InformativeScreenshot="8edaaf8697c6ce988564f98cb29a8d97.png" ScopeSelectorArgument="&lt;wnd app='1cv8ct.exe' cls='*TopLevel*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'По нашей организации'" sap:VirtualizedContainerService.HintSize="571,198" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="38c21c1a-a968-49c8-8df6-3efe6530e582" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvTextArea="44, 9, 224, 16" CvTextArgument="No Haweu oprahM3ayMm N KOHTpareHTy" CvType="Text" DesignTimeRectangle="2, 2, 324, 29" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;uia name='По нашей организации и контрагенту' role='элемент меню' /&gt;" FuzzySelectorArgument="&lt;uia name='По нашей организации и контрагенту' role='элемент меню' automationid='' check:fulltext='По нашей организации и контрагенту' /&gt;" Guid="2bdadde7-49de-4174-88b0-6f6cfaf8d487" ImageBase64="" InformativeScreenshot="40b520dd7e9a4f0bd2e41982328568e7.png" ScopeSelectorArgument="&lt;wnd app='1cv8ct.exe' cls='*CommandPanel*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Провести'" sap:VirtualizedContainerService.HintSize="571,198" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="38c21c1a-a968-49c8-8df6-3efe6530e582" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvElementArea="470, 105, 87, 28" CvTextArea="484, 112, 57, 16" CvTextArgument="NpoBeCTM" CvType="Button" DesignTimeRectangle="471, 106, 84, 27" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;uia name='Провести' role='кнопка' /&gt;" FuzzySelectorArgument="&lt;uia role='панель инструментов' /&gt;&lt;uia name='Провести' role='кнопка' automationid='' check:fulltext='Провести' /&gt;" Guid="3b7576f2-cfb1-4a00-b3ad-1b3ce78e502b" InformativeScreenshot="9d6b7ed25c688746ca2deba5b23dbaa2.png" ScopeSelectorArgument="&lt;wnd app='1cv8ct.exe' cls='*TopLevel*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Печать'" sap:VirtualizedContainerService.HintSize="571,198" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="38c21c1a-a968-49c8-8df6-3efe6530e582" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvTextArea="603, 112, 44, 13" CvTextArgument="Ne4aT6" CvType="Text" DesignTimeRectangle="575, 106, 91, 27" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;uia name='Печать' role='кнопка' /&gt;" FuzzySelectorArgument="&lt;uia role='панель инструментов' /&gt;&lt;uia name='Печать' role='кнопка' automationid='' check:fulltext='Печать' /&gt;" Guid="c1b60bcd-efd1-4329-a333-9672d464ef91" InformativeScreenshot="8b0b95629f34de1c7cb216b6854ba89d.png" ScopeSelectorArgument="&lt;wnd app='1cv8ct.exe' cls='*TopLevel*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Акт сверки'" sap:VirtualizedContainerService.HintSize="571,198" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="38c21c1a-a968-49c8-8df6-3efe6530e582" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvTextArea="43, 9, 68, 15" CvTextArgument="AKT cBepKM" CvType="Text" DesignTimeRectangle="2, 2, 305, 29" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;uia name='Акт сверки' role='элемент меню' /&gt;" FuzzySelectorArgument="&lt;uia name='Акт сверки' role='элемент меню' automationid='' check:fulltext='Акт сверки' /&gt;" Guid="bf679c9e-d1ef-4958-b6ab-67511b076f09" InformativeScreenshot="63aa176b5b62ff16bd4c233b7d2f2679.png" ScopeSelectorArgument="&lt;wnd app='1cv8ct.exe' cls='*CommandPanel*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Завершить'" sap:VirtualizedContainerService.HintSize="571,183" sap2010:WorkflowViewState.IdRef="NClick_16" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="38c21c1a-a968-49c8-8df6-3efe6530e582" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvElementArea="372, 115, 128, 28" CvTextArea="402, 122, 67, 16" CvTextArgument="3aBepWMTb" CvType="Button" DesignTimeRectangle="373, 116, 126, 27" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;uia name='Завершить' role='кнопка' /&gt;" FuzzySelectorArgument="&lt;uia name='Завершить' role='кнопка' automationid='' check:fulltext='Завершить' /&gt;" Guid="685b2bdc-9794-4446-861e-1ffb74f4d134" InformativeScreenshot="cab69f96afad4ef35fc6c67e75992fc8.png" ScopeSelectorArgument="&lt;wnd app='1cv8ct.exe' cls='*TopLevel*' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="716, 416, 488, 207" FilePath="C:\Program Files (x86)\1cv8t\8.3.18.1741\bin\1cv8ct.exe" IconBase64="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" InformativeScreenshot="71a51e55b0c2fc6636b08405c9b4e606.png" Selector="&lt;wnd app='1cv8ct.exe' cls='*TopLevel*' /&gt;" Title="1С:Предприятие" />
+        </uix:NApplicationCard.TargetApp>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </uix:NApplicationCard>
+    </Sequence>
+  </Sequence>
+</Activity>

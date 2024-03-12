@@ -12,6 +12,7 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "str_textInputField&Sequence_1",
         "str_cellTarget&Sequence_1",
         "cell_position&Sequence_13",
         "wb_excel&Sequence_1",
@@ -92,6 +93,34 @@
         "in_str_listName",
         "in_dt_wrongActs"
       ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "ReceivingActs.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_expirationDate&Sequence_15",
+        "str_INN&Sequence_15",
+        "bool_existINN&Sequence_15",
+        "str_agreement&Sequence_15",
+        "str_startDate&Sequence_15",
+        "bool_correctFormat&Sequence_15",
+        "bool_correctFormat&Sequence_12",
+        "str_startDate&Sequence_12",
+        "str_INN&Sequence_12",
+        "bool_existINN&Sequence_12",
+        "str_agreement&Sequence_12",
+        "str_agreement&Sequence_9",
+        "str_selection&Sequence_4",
+        "str_INN&Sequence_9",
+        "bool_existINN&Sequence_9",
+        "str_toSearch&Sequence_1",
+        "list_agreementName&Sequence_1",
+        "str_INN&Sequence_5",
+        "bool_existINN&Sequence_5"
+      ],
+      "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     }
